@@ -17,16 +17,16 @@
     "typescript",
     "nextjs",
     "graphql",
-    "tailwindcss"
+    "Chakra"
   ],
   "author": "Mario Andres Brito Palencia",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^17.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.8.0",
-    "@typescript-eslint/parser": "^5.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
     "eslint": "^8.4.1",
-    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react": "^7.28.0",
     "nodemon": "^2.0.15",
     "stylelint": "^14.1.0",
     "ts-node": "^10.4.0",
@@ -38,6 +38,7 @@
     "@mikro-orm/migrations": "^4.5.9",
     "@mikro-orm/postgresql": "^4.5.9",
     "@types/express": "^4.17.13",
+    "apollo-server-core": "^3.5.0",
     "apollo-server-express": "^3.5.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",

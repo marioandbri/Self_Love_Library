@@ -1,6 +1,6 @@
 import { MikroORM } from '@mikro-orm/core'
 import path from 'node:path'
-import { __dbpass__, __dbuser__, __prod__ } from './constants'
+import { __dbpass__, __dbuser__, __host__, __prod__ } from './constants'
 import { Book } from './entities/Book'
 
 export default {
@@ -9,6 +9,7 @@ export default {
     pattern: /^[\w-]+\d+\.[tj]s$/,
   },
   entities: [Book],
+  host:__host__,
   user: __dbuser__,
   password: __dbpass__,
   dbName: 'sl_library',

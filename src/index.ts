@@ -3,10 +3,12 @@ import { MikroORM } from '@mikro-orm/core'
 import mikroOrmConfig from './mikro-orm.config'
 dotenv.config()
 import express from 'express'
+import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import { ApolloServer } from 'apollo-server-express'
 import { buildSchema } from 'type-graphql'
 import { HelloResolver } from './resolvers/hello'
 import { BookResolver } from './resolvers/book'
+import { MyContext } from "./types";
 
 const main = async () => {
   const orm = await MikroORM.init(mikroOrmConfig)
@@ -22,7 +24,8 @@ const main = async () => {
       resolvers: [HelloResolver, BookResolver],
       validate: false,
     }),
-    context: ({ req, res }) => ({ req, res, em: orm.em }),
+    context: ({ req, res }):MyContext => ({ req, res, em: orm.em }),
+    plugins:[ApolloServerPluginLandingPageGraphQLPlayground]
   })
   await apolloServer.start()
   apolloServer.applyMiddleware({ app })
