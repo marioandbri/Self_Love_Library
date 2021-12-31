@@ -8,7 +8,8 @@
     "dev": "nodemon dist/index.js",
     "start": "node dist/index.js",
     "start2": "ts-node src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create:migration": "npx mikro-orm migration:create"
   },
   "keywords": [
     "Library",
@@ -22,6 +23,8 @@
   "author": "Mario Andres Brito Palencia",
   "license": "ISC",
   "devDependencies": {
+    "@types/connect-redis": "^0.0.18",
+    "@types/express-session": "^1.17.0",
     "@types/node": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
@@ -40,10 +43,14 @@
     "@types/express": "^4.17.13",
     "apollo-server-core": "^3.5.0",
     "apollo-server-express": "^3.5.0",
+    "argon2": "^0.28.3",
+    "connect-redis": "^6.0.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
+    "express-session": "^1.17.0",
     "graphql": "^15.8.0",
     "pg": "^8.7.1",
+    "redis": "^4.0.1",
     "type-graphql": "^1.1.1"
   },
   "mikro-orm": {
